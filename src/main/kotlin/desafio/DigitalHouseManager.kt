@@ -3,10 +3,10 @@ package desafio
 import kotlin.coroutines.coroutineContext
 
 class DigitalHouseManager {
-    val alunos = mutableListOf<Aluno>()
-    val professores = mutableListOf<Professor>()
-    val cursos = mutableListOf<Curso>()
-    val matriculas = mutableListOf<Matricula>()
+    private val alunos = mutableListOf<Aluno>()
+    private val professores = mutableListOf<Professor>()
+    private val cursos = mutableListOf<Curso>()
+    private val matriculas = mutableListOf<Matricula>()
 
     fun registrarCurso(nome: String, codigoCurso: Int, quantidadeMaximaDeAlunos: Int){
         if(cursos.find { it.codigoDeCurso == codigoCurso } == null){
