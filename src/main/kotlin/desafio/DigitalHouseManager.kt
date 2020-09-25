@@ -64,4 +64,12 @@ class DigitalHouseManager {
         }
     }
 
+    fun consultarCursoDoAluno(codigoAluno: Int){
+        val matricula = matriculas.find { it.aluno.codigoDeAluno == codigoAluno }
+        if(matricula == null){
+            println("Matricula do aluno não encontrada.")
+        } else {
+            println("Aluno matriculado no curso ${matricula.curso.nome}.")
+        }
+    }
 }
